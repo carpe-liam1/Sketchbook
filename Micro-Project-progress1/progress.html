@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress #1</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="projectstyle.css">
+    </head>
+
+
+    <body>
+        <h1>
+            Progress #1
+        </h1>
+<div class="analysis">
+    <div class="summary">
+
+        <h2>
+            Summary
+        </h2>
+
+        <p>
+            The primary function of my sketch is to create an interactive experience which will allow the user to bend and warp the perimeter of the ellipse put on screen. Through use of different keys and mouse movement, the user will be able to "push" or "pull" specific points on the perimeter of the ellipse, manipulating its overall shape. This change in shape will be the main variable changing over time. However, I also plan to create a function which will allow the user to also cause the ellipse to revert back gradually to its ellipse form, dispaying the change in form as a fluid process as well. 
+
+        </p>
+       
+         <h2>
+            Primary variable
+        </h2>
+        <p>
+            The primary variable in this sketch is the distance between the position of MouseX and MouseY and the nearest point on the perimeter of the ellipse. This initial distance (stage=0) will be added to or subtracted from by manipulation of the ellipse and its shape (Stage++ or Stage--). 
+
+        </p>
+    </div>
+
+    <div class="future">
+        <h2>
+            Base Build
+        </h2>
+
+        <p>
+            This week I plan to code the following: 
+            - The primary variable which I will designate as Distortion[]
+            - An input which will be the mousePressed function making and if statement where if mousePressed happens then the nearest point of the ellipse perimeter will beginning to be pulled towards the mouse position, thus warping the shape.
+            - The first state will be the original ellipse with Distortion[0] applied. 
+            The second state which will be some kind of warp effect applied to the ellipse with Distortion[i] applied.
+
+        </p>
+      
+
+        <h2>
+            Future changes
+        </h2>
+        <p>
+            Moving forward, there is a lot which I am excited to explore with this sketch. Firstly, I hope to be able to manipulate the changed state (distorted ellipse) and add the choice of pausing or regressing the changes made to the shape. Building off of this, I need to add a reset button as well as undo button perhaps. Ultimately, my goal is to be able to manipulate Typography with these functions allowing the user to deconstruct typefaces into simplified forms. This aligns with my current research into deconstructivism and seeing how far legibility can be pushed (warped on might say). 
+
+        </p>
+        <br>
+        edit: Now having worked on the microproject, I've found my goal a bit more complex than I expected it. I will need to create a circle through code so I can have each point of the curve as a variable which can then be manipulated. This doesn't work with the ellipse function since the ellipse's perimeter is not properly defined for implementing changes to it. I'm currently trying to figure out how to input the proper equation for goalX and goal Y which is the percieved goal result of each "distortion" applied. 
+    </div>
+
+</div>
+    <script src="progress.js"></script>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+</html>
