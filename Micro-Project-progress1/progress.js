@@ -1,8 +1,9 @@
 
 let points = [];
-let resolution = 80; 
+let resolution = 200; 
 let radius = 150;
-let pushStrength = 0.15; 
+let pushStrength = 0.05; 
+let pullStrength = 0.05;
 
 function setup() {
   createCanvas(600, 600);
@@ -15,11 +16,9 @@ function setup() {
     points.push({
       currX: x,
       currY: y,
-      goalX: (mouseX-x)/(mouseY-y)*(x),
-      goalY: (mouseX-x)/(mouseY-y)*(y),
-
-
     
+
+
     });
   }
 }
@@ -29,22 +28,29 @@ function draw() {
 
   fill(255, 0, 0);
   stroke(0);
-  strokeWeight(2);
-  
+  strokeWeight(0);
+
+
   beginShape();
 
 
-  for (let p of points) {
-    if (mouseIsPressed) {
-      let d = dist(mouseX, mouseY, p.currX, p.currY);
-      
-      if (d < 100) {
-        p.currX = lerp(p.currX, p.goalX, pushStrength);
-        p.currY = lerp(p.currY, p.goalY, pushStrength);
-      }
-    }
+for (let p of points) {
+  if (mouseIsPressed) {
+    // 1. Calculate the distance and the difference
+    let dx = p.currX - mouseX;
+    let dy = p.currY - mouseY;
+    let d = dist(mouseX, mouseY, p.currX, p.currY);
+    let minGap = 5
 
    
+    if (d < 120 && d > 0) {
+
+      p.currX += (dx / d) * 10 * pushStrength;
+      p.currY += (dy / d) * 10 * pushStrength;
+    }
+
+    }
+
 
     curveVertex(p.currX, p.currY);
   }

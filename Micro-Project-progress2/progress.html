@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress #2</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="projectstyle.css">
+    </head>
+
+
+    <body>
+        <h1>
+            Progress #2
+        </h1>
+<div class="analysis">
+    <div class="summary">
+
+        <h2>
+            Current Build
+        </h2>
+
+        <p>
+            So far I've reconfigured the js code to outline, instead of an ellipse shape, the points of a certain block of text (in this case AMOEBA). Unfortunately, the overall shape is still not quite represented in the way which I would like since the points only capture the perimeter of the text. This is since I am not using a curveVertex to connect these points. I'm hoping to explore how I might be able to apply the curveVertex function to the points in order to create a more cohesive shape. 
+
+        </p>
+       
+         <h2>
+            Pressure
+        </h2>
+        <p>
+            The pressure in my project comes from the additional lerp function implemented as an else feature. These action draws the points which have been altered back to their original positon if the mouse is not presses within their vicinity. 
+
+        </p>
+    </div>
+
+    <div class="future">
+        <h2>
+            Structural Addition
+        </h2>
+
+        <p>
+            This week I added a pause featue which counteracts the pressure lerp I've mentioned above. With the pause button, I made the function of mousePressed part of a larger true or false variable which freezes the movement of points. This way, the user can pause the distortion they've done and analyze it without It changing shape. Additionally, this feature allows for the user to mess with the legibility of the text by pausing and unpausing the movement until they are satisfied with the result. Two things I want to do is rewrite the code so that the pause button is instead an unpause button so that the movement of the lerp function isn't constantly affecting the text as well as Another Idea I have would be to reverse the movement which has happened with points, however I'm not informed enough to understand what kind of code this would entail. 
+
+        </p>
+
+    </div>
+
+</div>
+
+<button id="myButton"> PAUSE!</button>
+
+    <script src="progress.js"></script>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+</html>
