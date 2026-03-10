@@ -55,12 +55,12 @@ function draw() {
       let dy = p.currY - mouseY;
       let d = dist(mouseX, mouseY, p.currX, p.currY);
 
-      if (mouseIsPressed && d < 60 && d > 0) {
+      if (mouseIsPressed && d < 80 && d > 0) {
         p.currX += (dx / 20) * 10 * pushStrength;
         p.currY += (dy / d) * 10 * pushStrength;
       } else {
-        p.currX = lerp(p.currX, p.baseX, 0.01);
-        p.currY = lerp(p.currY, p.baseY, 0.01);
+        p.currX = lerp(p.currX, p.baseX, 0.001);
+        p.currY = lerp(p.currY, p.baseY, 0.001);
       }
     }
 
