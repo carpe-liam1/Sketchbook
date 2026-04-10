@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(10000, 1000);
+  createCanvas(2000, 1000);
 
   // Setup Buttons
   let button2 = document.getElementById("revertbutton");
@@ -41,7 +41,7 @@ function setup() {
 
 function updateTextPoints() {
   let txt = userInput.value();
-  let options = { sampleFactor: 0.6 };
+  let options = { sampleFactor: 0.4 };
   points = [];
   let textPoints = font.textToPoints(txt, 150, 350, 200, options);
   for (let pt of textPoints) {
